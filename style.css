@@ -1,0 +1,636 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Armin Grotesk", 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #ccccccfe;
+    position: fixed;
+    top: 20px;
+    width: 100vw;
+    height: 40px;
+    border: 1px #222 solid;
+    border-left: none;
+    border-right: none;
+}
+
+header .nav_desktop {
+    display: none;
+}
+
+li, a, button{
+    text-decoration:none ;
+    color: #222;
+    font-weight: bolder;
+    list-style: none;
+    font-family: "Armin Grotesk";
+}
+
+.login_signup {
+    display: none;
+    flex-direction: column;
+    height: inherit;
+    justify-content:center;
+}
+
+header .logo_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 50vw;
+}
+
+header .logo_container .logo {
+    width: 120px;
+}
+
+header .menu_button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 50vw;
+    background-color: #043175;
+    padding: 6px;
+    border: 1px solid black;
+    border-right: none;
+}
+
+header .menu_button img {
+    width: 30px;
+    cursor: pointer;
+}
+
+main section {
+    height: 100vh;
+}
+
+.logo {
+    cursor: pointer;
+    margin: 5px;
+}
+
+.banner_desktop {
+    display: none;
+}
+
+.banner_mobile {
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.200),rgba(0, 0, 0, 0.200),rgba(0, 0, 0, 0.205),white), url(./assets/banner_mobile_bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 80vh;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.banner_mobile .logo_banner_mobile {
+    background-color: #ccccccfe;
+    padding: 10px;
+    border-radius: 30px;
+    border: solid #222 3px;
+    width: fit-content;
+}
+
+.banner_mobile .logo_banner_mobile img {
+    width: 250px;
+}
+
+.banner_mobile p {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-weight: bolder;
+    margin: 10px;
+}
+
+.main_content h1 {
+    color: black;
+    text-align: center;
+    font-size: 15px;
+    margin: 10px;
+    border-bottom: 1px solid black;
+}
+
+.main_content h1, ._our_feature_content .out_feature_main_h1 {
+    text-transform: uppercase;
+}
+
+.main_content {
+    background: linear-gradient(to bottom, white, black, #e0e0e0 );
+    padding-top: 10px;
+    margin: 20px 0;
+    height: fit-content;
+}
+
+.main_content_car_cards {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    background-color: #e0e0e0;
+    row-gap: 10px;
+    padding: 10px;
+    width: 100vw;
+    max-width: 100%;
+}
+
+.car_cards {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: whitesmoke;
+    border-radius: 10px;
+}
+
+.car_cards div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.car_cards p {
+    color: #222;
+}
+
+.car_cards .car_name {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.car_cards .car_brand {
+    font-size: 13px;
+}
+
+.car_cards .rent_price {
+    font-size: large;
+}
+
+.rent_price span {
+    color: gray;
+    font-size: medium;
+}
+
+.car_cards .button_wrap {
+    justify-content: center;
+    gap: 5px;
+}
+
+.car_cards .button_wrap button {
+    border: 1px solid #222;
+    border-radius: 7px;
+    margin-top: 5px;
+    font-size: small;
+    font-weight: normal;
+    text-transform: lowercase;
+    padding: 5px 15px;
+    cursor: pointer;
+}
+
+.button_tersewa, .button_tersewa:visited {
+    background-color: #EB4A59;
+}
+
+.button_tersewa:hover {
+    background-color: red;
+    cursor:not-allowed ;
+}
+
+.button_detail, .button_detail:visited {
+    background-color: #15B07D;
+}
+
+.button_detail:hover {
+    background-color: #14805c;
+    color: whitesmoke;
+}
+
+.button_tersedia, .button_tersedia:visited {
+    background-color:#0E88FE;
+}
+
+.button_tersedia:hover {
+    background-color: #043175;
+    color: whitesmoke;
+}
+
+.our_feature_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px 0 10px 0;
+    height: fit-content;
+}
+
+.our_feature_main_h1 {
+    width: 100vw;
+    max-width: 100%;
+    text-align: center;
+    border-bottom: black solid 1px;
+    font-size: medium;
+    text-transform: uppercase;
+}
+
+.our_feature_content_main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.feature_content_card {
+    display: flex;
+    flex-direction: column;
+    background-color: #e0e0e0;
+    margin: 10px;
+    border-radius: 10px;
+    gap: 5px;
+    width: fit-content;
+}
+
+.feature_content_card p {
+    font-size: medium;
+    font-weight: lighter;
+}
+
+.feature_content_card img {
+    height: 75px;
+    margin-bottom: 10px;
+    margin: 20px;
+}
+
+.feature_content_card_desc {
+    background-color: #222;
+    color: whitesmoke;
+    padding: 10px;
+    border-radius: 0 0 10px 10px;
+}
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #222;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer_social_media_desktop {
+    display: none;
+}
+
+.footer_section {
+    flex: 50%;
+    padding: 10px;
+}
+
+.footer_section h1 {
+    font-size: 15px;
+    text-align: center;
+    background-color: #e0e0e0;
+    margin-bottom: 5px;
+    border-radius: 5px 5px 0 0;
+    padding: 5px;
+}
+.footer_section a, .footer_section p {
+    color: whitesmoke;
+    font-weight: lighter;
+    opacity: 0.5;
+    margin-bottom: 5px;
+}
+
+.footer_section a:hover {
+    color: white;
+    opacity: 1;
+}
+
+.footer_logo {
+    display: none;
+}
+
+.footer_section_content {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer_social_media {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+
+@media screen and (min-width: 768px) {
+    header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        top: 25px;
+        height: 50px;
+        z-index: 2;
+    }
+
+    header .logo_container {
+        width: auto;
+    }
+
+    header .logo_container .logo {
+        width: 150px;
+    }
+
+    header .nav_desktop {
+        display: flex;
+        flex-direction: row;
+    }
+
+    header .menu_button {
+        display: none;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        gap: 25px;
+    }
+
+    li a {
+        font-size: 15px;
+    }
+
+    nav ul li a:hover {
+        color: #043175;
+        border-bottom: 1px solid #043175;
+    }
+
+    .login_signup {
+        display: flex;
+    }
+
+    .login_signup button {
+        padding: 5px 10px;
+        border: none;
+        font-size: 15px;
+    }
+    
+    .login_signup button:hover {
+        color: black;
+        background-color: whitesmoke;
+    }
+    
+    .login_signup .login_button {
+        color: whitesmoke;
+        background-color: #222;
+        border: 1px solid #222;
+        border-radius: 10px 10px 0 0;
+        border-bottom: none;
+    }
+    
+    .login_signup .signup_button {
+        color: white;
+        background-color: #043175;
+        border: 1px solid #222;
+        border-radius: 0 0 10px 10px;
+    }
+
+    .banner_mobile {
+        display: none;
+    }
+
+    .banner_desktop {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 70vh;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.200),rgba(0, 0, 0, 0.200),rgba(0, 0, 0, 0.205),white), url(./assets/banner_desktop.jpg);
+        background-size: cover;
+    }
+
+    .banner_desktop .logo_banner_desktop {
+        background-color: #ccccccfe;
+        padding: 10px;
+        border-radius: 30px;
+        border: solid #222 3px;
+        width: fit-content;
+    }
+
+    .banner_desktop .logo_banner_desktop img {
+        width: 350px;
+    }
+
+    .banner_desktop p {
+        color: whitesmoke;
+        padding: 10px;
+        font-size: x-large;
+        font-weight: bolder;
+    }
+
+    .banner_desktop .logo_banner_desktop, .banner_desktop p {
+        position: relative;
+        top: 200px;
+        z-index: 1;
+    }
+    
+    .main_content {
+        display: flex;
+        flex-direction: column;
+        background: linear-gradient(to bottom, white, #b7b7b7, white);
+    }
+
+    .main_content_car_cards {
+        flex-direction: row;
+        align-items: stretch;
+        gap: 20px;
+        background: none;
+    }
+
+    .car_cards {
+        justify-content: flex-end;
+    }
+
+    .car_cards img {
+        width: 210px;
+    }
+
+    .car_cards .car_name {
+        font-size: 13px;
+    }
+    
+    .car_cards .rent_price {
+        font-size: medium;
+    }
+    .car_cards .car_brand {
+        font-size: 11px;
+    }
+    .rent_price span {
+        font-size: small;
+    }
+    
+    .our_feature_content_main {
+        flex-direction: row;
+        align-items: stretch;
+    }
+
+    .feature_content_card {
+        margin: 10px 3px;
+    }
+
+    .feature_content_card_desc {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+
+    .feature_content_card_desc h1 {
+        height: 70px;
+    }
+
+    .feature_content_card_desc p {
+        justify-self: baseline;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    header {
+        height: 60px;
+        top: 20px;
+    }
+
+    header .logo_container .logo {
+        width: 180px;
+    }
+
+    nav ul {
+        gap: 60px;
+    }
+
+    li a {
+        font-size: 20px;
+    }
+
+    .login_signup button {
+        font-size: 20px;
+    }
+
+    .banner_desktop {
+        height: 90vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.200),rgba(0, 0, 0, 0.200),rgba(0, 0, 0, 0.205),rgba(0, 0, 0, 0.205),rgba(0, 0, 0, 0.205),rgba(0, 0, 0, 0.205),rgba(0, 0, 0, 0.205),rgba(0, 0, 0, 0.205), white), url(./assets/2023_Honda_HR-V_Sport,_front_2.9.23.jpg);
+    }
+
+    .banner_desktop .logo_banner_desktop {
+        padding: 20px;
+        border-radius: 40px;
+    }
+
+    .banner_desktop .logo_banner_desktop img {
+        width: 500px;
+    }
+
+    .banner_desktop p {
+        margin-top: 10px;
+        font-size: 30px;
+    }
+
+    .main_content h1 {
+        font-size: 30px;
+    }
+
+    .car_cards img {
+        width: 400px;
+    }
+
+    .car_cards .car_name {
+        font-size: 25px;
+    }
+
+    .car_cards .rent_price {
+        font-size: 25px;
+    }
+    .car_cards .car_brand {
+        font-size: 20px;
+    }
+    .rent_price span {
+        font-size: 15px;
+    }
+
+    .car_cards .button_wrap {
+        gap: 10px;
+    }
+
+    .car_cards .button_wrap button {
+        border: 2px solid #222;
+        border-radius: 10px;
+        font-size: larger;
+    }
+
+    .our_feature_content {
+        height: 50vh;
+    }
+
+    .our_feature_content h1 {
+        font-size: 25px;
+    }
+
+    .our_feature_content_main {
+        align-items: center;
+        height: 40vh;
+    }
+
+    .feature_content_card {
+        width: 20vw;
+        height: fit-content;
+    }
+
+    .feature_content_card_desc {
+        padding: 20px;
+    }
+
+    .feature_content_card_desc h1 {
+        height: fit-content;
+    }
+
+    footer {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, auto);
+    }
+
+    .footer_social_media {
+        display: none;
+    }
+
+    .footer_logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        grid-column: 1 / span 1 ;
+        grid-row: 1 / span 2;
+        row-gap: 15px;
+    }
+
+    .footer_logo .logo_banner_footer_desktop {
+        background-color: #ccccccfe;
+        padding: 10px;
+        border-radius: 20px;
+    }
+
+    .footer_social_media_desktop {
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+        justify-content: center;
+        grid-column: span 3;
+        grid-row: span 1;
+    }
+}
